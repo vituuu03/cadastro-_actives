@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #incluindo a app_cad_atividades nos apps instalados
     'app_cad_atividades'
 ]
 

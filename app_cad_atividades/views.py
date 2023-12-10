@@ -1,9 +1,14 @@
+#imports necessários
 from django.shortcuts import render
 from .models import Atividade
+
+#criando a função home
+#serve para renderizar a página home.html
 def home(request):
     return render(request, 'atividades/home.html')
 
-
+#criando a função atividades
+#serve para renderizar a página atividades.html
 def atividades(request):
     nova_atividade = Atividade()
     nova_atividade.nome = request.POST.get('nome')

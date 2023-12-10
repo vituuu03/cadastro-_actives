@@ -1,5 +1,8 @@
+<!-- Herda o template base.html -->
 {% extends 'atividades/base.html' %}
 
+<!-- Herda o bloco presente do template base.html -->
+<!-- serve para exibir a tabela sem precisar criar um novo template -->
 {% block listagem %}
     <table class="table table-bordered table-striped">
         <tr>
@@ -9,6 +12,7 @@
             <th>Atividades a serem realizadas</th>
             <th>Status</th>
         </tr>
+        <!-- {% for atividade in atividades %} serve para percorrer a lista de atividades -->
         {% for atividade in atividades %}
         <tr>
            
@@ -19,6 +23,8 @@
             <td>{{atividade.status}}</td>
            
         </tr>
+        <!-- fechamento do laço -->
         {% endfor %}
     </table>
+        <!-- fechamento do bloco -->
 {% endblock %}

@@ -1,6 +1,7 @@
 from django.db import models
 
-# Create your models here.
+#criando a classe Atividade
+#serve para criar a tabela no banco de dados
 class Atividade(models.Model):
     id_atividades = models.AutoField(primary_key=True)
     nome = models.TextField(max_length=255)

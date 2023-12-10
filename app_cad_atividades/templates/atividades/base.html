@@ -1,3 +1,5 @@
+<!-- TEMPLATE BASE, ONDE SERVE PARA TODAS AS PAGINAS HTML -->
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,8 +15,11 @@
   <body>
     
     <div class ="container">
+      <!-- Bloco para exibir conteudos que serão herdados por outros arquivos html -->
+      <!-- para exibir a informação de outros arquivos html, basta apenas chamar o bloco-->
         {% block listagem %}
 
+        <!-- fechamento do bloco -->
         {% endblock %}
        
     </div>

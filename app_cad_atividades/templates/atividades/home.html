@@ -1,6 +1,11 @@
+<!-- Herda o template base.html -->
 {% extends 'atividades/base.html' %}
+<!-- Herda o bloco presente do template base.html -->
+<!-- serve para exibir o form sem precisar criar um novo template -->
 {% block listagem %}
       <form action="{% url 'listagem_atividades' %}" method="post">
+      <!-- {% csrf_token %} serve para evitar ataques de hackers, ou seja, proteger contra ataques de 
+            cross-site request forgery (CSRF) -->
         {% csrf_token %}
         <h1>Cadastro de Atividades</h1>
         Nome<input type="text" name="nome"> <br/>
@@ -13,4 +18,5 @@
                 </select> <br/>
                 <button>Enviar</button>
       </form>
+      <!-- fechamento do bloco -->
 {% endblock %}
