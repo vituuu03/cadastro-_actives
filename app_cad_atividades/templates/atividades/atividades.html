@@ -1,0 +1,24 @@
+{% extends 'atividades/base.html' %}
+
+{% block listagem %}
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Data de entrada</th>
+            <th>Atividades a serem realizadas</th>
+            <th>Status</th>
+        </tr>
+        {% for atividade in atividades %}
+        <tr>
+           
+            <td>{{atividade.id_atividades}}</td>
+            <td>{{atividade.nome}}</td>
+            <td>{{atividade.data}}</td>
+            <td>{{atividade.atividades}}</td>
+            <td>{{atividade.status}}</td>
+           
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

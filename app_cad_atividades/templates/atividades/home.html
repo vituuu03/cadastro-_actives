@@ -1,0 +1,16 @@
+{% extends 'atividades/base.html' %}
+{% block listagem %}
+      <form action="{% url 'listagem_atividades' %}" method="post">
+        {% csrf_token %}
+        <h1>Cadastro de Atividades</h1>
+        Nome<input type="text" name="nome"> <br/>
+        Data de Entrada<input type="date" name="data"><br/>
+        Atividades a serem 
+        Realizadas<input type="text" name="atividades"><br/>
+        status<select id="status_id" name="status">
+                <option value="pendente">Pendente</option>
+                <option value="concluido">Concluido</option>
+                </select> <br/>
+                <button>Enviar</button>
+      </form>
+{% endblock %}
