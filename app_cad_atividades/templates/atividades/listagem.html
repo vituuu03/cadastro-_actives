@@ -1,0 +1,33 @@
+<!-- Herda o template base.html -->
+{% extends 'atividades/base.html' %}
+
+<!-- Herda o bloco presente do template base.html -->
+<!-- serve para exibir a tabela sem precisar criar um novo template -->
+{% block listagem %}
+<br/>
+<br/>
+<button style="text-decoration: none; align-items: center; padding: 25px;" class="container"><a href="{% url 'index' %}">VOLTAR</a></button>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>Codigo</th>
+                <th>Nome do Cliente</th>
+                <th>Data de Entrada</th>
+                <th>Atividades a Serem Realizadas</th>
+                <th>Status</th>
+            </tr>
+        <!-- serve para percorrer a lista de atividades -->
+    {% for atividade in atividades %}            
+    <tr>
+
+                <td>{{atividade.id_atividades}}</td>
+                <td>{{atividade.nome}}</td>
+                <td>{{atividade.data}}</td>
+                <td>{{atividade.atividades}}</td>
+                <td>{{atividade.status}}</td>
+
+            </tr>
+             <!-- fechamento do laço -->
+    {% endfor %}
+    </table>
+<!-- fechamento do bloco -->
+{% endblock %}

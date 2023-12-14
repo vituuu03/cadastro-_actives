@@ -5,7 +5,7 @@ from django.db import models
 class Atividade(models.Model):
     id_atividades = models.AutoField(primary_key=True)
     nome = models.TextField(max_length=255)
-    data = models.DateField(auto_now=True)
+    data = models.DateField()
     atividades = models.TextField(max_length=255)
     STATUS_CHOICES = (
         ('pendente', 'Pendente'),
@@ -13,3 +13,4 @@ class Atividade(models.Model):
         ('cancelado', 'Cancelado'),
     )
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='pendente')
+

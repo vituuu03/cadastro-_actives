@@ -21,4 +21,20 @@ def atividades(request):
             'atividades': Atividade.objects.all()
     }
 
-    return render(request, 'atividades/atividades.html', atividades)
+    return render(request, 'atividades/listagem.html', atividades)
+
+#criando a função para visualizar a página index.html
+#serve para renderizar a página index.html
+def homePageView(request):
+    return render(request, 'homepage/index.html')
+
+
+#criando a função para visualizar a página listagem.html
+#serve para renderizar a lista de atividades
+def mostrarListaAtividades(request):
+    atividades={
+            'atividades': Atividade.objects.all()
+    }
+
+    return render(request, 'atividades/listagem.html', atividades)
+

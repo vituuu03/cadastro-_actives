@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+*{ /*cabeçario*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+body{ /*cor corpo*/
+    font-size: 100%;
+    background-color: #fcfcfc;
+}
+header{ /*cor cabeçario*/
+    padding: 30px 70px;
+    background: #000000;
+}
+.navigation{ /*categorias cabeçario localização*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation.logo{ /*foto da logo cabeçario*/
+    width: 140px;
+}
+.navigation ul{ /*ordem da lista do cabeçario*/
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.navigation ul li a{ /*cor das categorias cabeçario*/
+    color: #888;
+    font-weight: 600;
+    padding-bottom: 4px;
+    transition: all 0.5s ease-in-out;
+}
+.navigation ul li a:hover{ /*cor que ao passar o mouse em cima fica as categorias do cabeçario*/
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+.navigation .check{
+    color: #f2f2f2;
+    border-bottom: 1px solid #f3f2f2;
+}
+main section{ /*localização do texto do corpo*/
+    display: flexbox;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 5rem;
+}
+.main-text h3{ /*tamanho do titulo "NEEP"*/
+    font-size: 5.5rem;
+    margin-bottom: 2rem;
+}
+.main-text p{  /*espaço entre peças e frase*/
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+}
+.footer{ /*cor do rodapé*/
+    padding: 30px 70px;
+}
+.footer-social{ /* alinhar e centralizar os icones do rodapé*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px; 
+}
+.container{ /*centralizar o rodapé*/
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(0, 0, 0)
+}
+img{ /*cor dos icones do rodapé*/
+    background-color: white;
+    border-radius: 15px;
+}
+
+#carouselExampleIndicators{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #000000;
+}
+
